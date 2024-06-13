@@ -1,0 +1,4 @@
+Hostname : mqmliferedis01.redis.cache.windows.net
+Access key 기본 : hBqQW7SMeFRJQm4x94OrkQ2dENIK8vClVAzCaNXGFoM=
+Access key 보조 : J4oKw69N8Z2s9JV1ttDdvYJiywNt7oaRzAzCaHjYipc=
+Port : 6379
