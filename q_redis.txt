@@ -1,1 +1,7 @@
+검증
+mqmlifesqldb01.95e185550f36.database.windows.net
+mliadm
 
+운영
+mpmlifesqldb01.047e30f6c6d2.database.windows.net
+mliadm
