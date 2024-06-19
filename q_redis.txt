@@ -1,7 +1,11 @@
-검증
-mqmlifesqldb01.95e185550f36.database.windows.net
-mliadm
+USE master
+GO
 
-운영
-mpmlifesqldb01.047e30f6c6d2.database.windows.net
-mliadm
+--Create Credential 
+    CREATE  CREDENTIAL [https://dbcopyonlymlife.blob.core.windows.net/dbcopy-cont] 
+      WITH  IDENTITY   =   N'SHARED ACCESS SIGNATURE' 
+        ,   SECRET     =   N'sp=rawdl&st=2024-06-19T01:45:42Z&se=2025-02-01T09:45:42Z&spr=https&sv=2022-11-02&sr=c&sig=ZkqU4Qgwm%2F1nOsS7Zi5Hn8AsAezJO2vmOG%2Bnvcjoxwg%3D'; --
+    GO
+--Restore from Storage account
+    RESTORE DATABASE [restoreTest20240618] FROM URL = N'https://dbcopyonlymlife.blob.core.windows.net/dbcopy-cont/reportserver_backup_2024_06_18_060205.bak' 
+    GO
